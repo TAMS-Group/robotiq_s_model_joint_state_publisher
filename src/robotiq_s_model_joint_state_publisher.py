@@ -62,11 +62,6 @@ def calulatePalmAngle(fingerPosition, mode):
 
 # updates the global joint state message object
 def updateLocalJointState(inputRegisterMessage):
-    rospy.loginfo(rospy.get_caller_id() + "Input Registers " + "gPOA:" + str(inputRegisterMessage.gPOA)
-	 + " gPOB:" + str(inputRegisterMessage.gPOB)
-	 + " gPOC:" + str(inputRegisterMessage.gPOC)
-	 + " gPOS:" + str(inputRegisterMessage.gPOS))
-
     for finger in range(0, 3): 
         position = inputRegisterMessage.gPOC
         if (finger==1):
