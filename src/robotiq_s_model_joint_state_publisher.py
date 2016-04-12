@@ -100,7 +100,7 @@ def generateJointStatesFromRegisterStateAndPublish():
 
     pub = rospy.Publisher('joint_states', JointState, queue_size=1) #no buffering?
     rospy.init_node('robotiq_s_model_joint_state_publisher', anonymous=False)
-    rate = rospy.Rate(10) # publishes at 100Hz 
+    rate = rospy.Rate(100) # publishes at 100Hz
 
     while not rospy.is_shutdown():
         currentJointState.header.stamp = rospy.Time.now()
