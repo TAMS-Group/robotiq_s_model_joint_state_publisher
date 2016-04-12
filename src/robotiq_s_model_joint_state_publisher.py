@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 import rospy
-import roslib
 from sensor_msgs.msg import JointState
 from robotiq_s_model_control.msg import _SModel_robot_input  as inputMsg
 from time import sleep
